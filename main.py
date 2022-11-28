@@ -17,7 +17,7 @@ reddit = praw.Reddit(client_id=client_id,
                      user_agent=user_agent)
 
 # defining the subreddit that will be scanned for new posts
-subreddit = reddit.subreddit('assetto_pirate')
+subreddit = reddit.subreddit('')
 # initiating the lastUrl variable to check if a post is new
 lastUrl = ""
 # continuous scanning
@@ -43,7 +43,7 @@ while True:
                 submission = reddit.submission(url=theurl)
                 # trying to reply
                 try:
-                    submission.reply("This an automated bot message. SwissCookieMan has made a modlist for r/assetto_pirate . Try to see if what you need is here: https://docs.google.com/spreadsheets/d/1SzrNAgVKnx8Wc1wbpdgN_j-qLne-yKhxMAbD0Q_mIms/edit?usp=sharing  | This is automated by a bot")
+                    submission.reply("")
                 # catching errors from when the bot has exceeded the reply rate and resetting lastUrl to retry at next scan
                 except:
                     lastUrl = ""
