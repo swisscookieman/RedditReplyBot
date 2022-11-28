@@ -17,6 +17,7 @@ reddit = praw.Reddit(client_id=client_id,
                      user_agent=user_agent)
 
 # defining the subreddit that will be scanned for new posts
+#PUT SUBREDDIT HERE
 subreddit = reddit.subreddit('')
 # initiating the lastUrl variable to check if a post is new
 lastUrl = ""
@@ -43,6 +44,7 @@ while True:
                 submission = reddit.submission(url=theurl)
                 # trying to reply
                 try:
+                    #PUT REPLY MESSAGE HERE
                     submission.reply("")
                 # catching errors from when the bot has exceeded the reply rate and resetting lastUrl to retry at next scan
                 except:
